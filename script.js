@@ -1,34 +1,26 @@
+// Switch between pages
 function showPage(pageName) {
-  var allPages = document.querySelectorAll('.page');
-  allPages.forEach(function(page) {
+
+  // Hide all pages
+  document.querySelectorAll('.page').forEach(function(page) {
     page.classList.add('hidden');
   });
 
-  // Show only the page we want
+  // Show the selected page
   document.getElementById('page-' + pageName).classList.remove('hidden');
 
-  // Update which nav link looks active
-  var allLinks = document.querySelectorAll('.nav-btn');
-  allLinks.forEach(function(link) {
+  // Update active nav link highlight
+  document.querySelectorAll('.nav-btn').forEach(function(link) {
     link.classList.remove('active');
     if (link.getAttribute('data-page') === pageName) {
       link.classList.add('active');
     }
   });
 
-  // Scroll back to top
   window.scrollTo(0, 0);
 }
 
-// Run showPage when a nav link is clicked
-var allLinks = document.querySelectorAll('.nav-btn');
-allLinks.forEach(function(link) {
-  link.addEventListener('click', function(e) {
-    e.preventDefault();
-    showPage(link.getAttribute('data-page'));
-  });
-});
-
+// Contact form validation
 function submitForm() {
   var name    = document.getElementById('name').value.trim();
   var email   = document.getElementById('email').value.trim();
