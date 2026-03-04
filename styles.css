@@ -79,6 +79,7 @@ nav a.active {
   border: none;
   font-size: 0.95rem;
   cursor: pointer;
+  border-radius: 6px;
 }
 
 .btn:hover {
