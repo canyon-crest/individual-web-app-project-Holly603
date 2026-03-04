@@ -1,12 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>JS | Variables and Methods</title>
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Holly Wang | Photography</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <h1>Your html goes here...</h1>
-    <br>See the <a href="README.md">README</a> for project details
+
+  <nav>
+    <span class="logo">Holly Wang</span>
+    <ul>
+      <li><a href="#" class="nav-btn active" data-page="home">Home</a></li>
+      <li><a href="#" class="nav-btn" data-page="gallery">Gallery</a></li>
+      <li><a href="#" class="nav-btn" data-page="about">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- HOME PAGE -->
+  <div id="page-home" class="page">
+    <section class="hero">
+      <h1>Welcome to My Photography Portfolio</h1>
+      <p>Hi, I'm Holly, a high school sophomore interested in AI, HCI, and psychology.</p>
+      <button class="btn" onclick="showPage('gallery')">View My Work</button>
+    </section>
+  </div>
+
+  <!-- GALLERY PAGE -->
+  <div id="page-gallery" class="page hidden">
+    <section class="content">
+      <h2>Gallery</h2>
+      <p>A collection of my favorite shots.</p>
+
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="images/photo1.jpg" alt="Photo 1" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/photo2.jpg" alt="Photo 2" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/photo3.jpg" alt="Photo 3" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/photo4.jpg" alt="Photo 4" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/photo5.jpg" alt="Photo 5" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/photo6.jpg" alt="Photo 6" />
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ABOUT PAGE -->
+  <div id="page-about" class="page hidden">
+    <section class="content">
+      <h2>About Me</h2>
+      <div class="about-wrapper">
+        <img src="images/about.jpg" alt="Holly Wang" class="about-img" />
+        <div class="about-bio">
+          <p>Hi, I'm Holly Wang, a high school sophomore who loves photography and is curious about AI, human-computer interaction, and psychology.</p>
+          <p>Photography is how I slow down and pay attention to the world around me.</p>
+        </div>
+      </div>
+
+      <!-- Contact form -->
+      <h3>Get In Touch</h3>
+      <div id="contact-form">
+        <input type="text" id="name" placeholder="Your name" /><br/>
+        <input type="email" id="email" placeholder="Your email" /><br/>
+        <textarea id="message" rows="4" placeholder="Your message..."></textarea><br/>
+        <p id="form-error" class="error hidden">Please fill in all fields.</p>
+        <button class="btn" onclick="submitForm()">Send</button>
+      </div>
+      <p id="form-success" class="success hidden">✅ Thanks! I'll be in touch soon.</p>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Holly Wang</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
