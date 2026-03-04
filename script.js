@@ -1,6 +1,4 @@
 function showPage(pageName) {
-
-  // Hide all pages
   var allPages = document.querySelectorAll('.page');
   allPages.forEach(function(page) {
     page.classList.add('hidden');
